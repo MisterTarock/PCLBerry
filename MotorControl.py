@@ -58,11 +58,7 @@ class MotorControl:
 
 
 motor=MotorControl()
-<<<<<<< HEAD
-motor.forward(100,100)
-=======
 motor.forward(50,50)
->>>>>>> c1a11fef3355fea58a05e296da176a8e7a85d883
 time.sleep(5)
 motor.stop()
 GPIO.cleanup()
