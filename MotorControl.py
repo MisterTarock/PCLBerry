@@ -27,7 +27,7 @@ GPIO.output(Motor2E, GPIO.HIGH)
 
 sleep(20)
 
-print("Turning motor Arrière on")
+print("Turning motor Arriere on")
 GPIO.output(Motor1Arr, GPIO.HIGH)
 GPIO.output(Motor1Av, GPIO.LOW)
 GPIO.output(Motor1E, GPIO.HIGH)
