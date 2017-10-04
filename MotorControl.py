@@ -21,7 +21,7 @@ print("Turning motor on")
 GPIO.output(Motor1A, GPIO.HIGH)
 GPIO.output(Motor1B, GPIO.LOW)
 GPIO.output(Motor1E, GPIO.HIGH)
-GPIO.output(Motor2A, GPIO.HIGH)
+GPIO.output(Motor2A, GPIO.LOW)
 GPIO.output(Motor2B, GPIO.HIGH)
 GPIO.output(Motor2E, GPIO.HIGH)
 
