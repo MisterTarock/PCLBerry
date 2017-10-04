@@ -8,7 +8,7 @@ class MotorControl:
         GPIO.setmode(GPIO.BOARD)
 
         self.Motor1Arr = 16
-        self.Motor1Av = 10
+        self.Motor1Av = 12
         self.Motor1E = 22
         self.Motor2E = 15
         self.Motor2Arr = 13
@@ -58,7 +58,7 @@ class MotorControl:
 
 
 motor=MotorControl()
-motor.forward(100,100)
+motor.forward(50,50)
 time.sleep(5)
 motor.stop()
 GPIO.cleanup()
