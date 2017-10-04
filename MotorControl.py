@@ -17,7 +17,17 @@ GPIO.setup(Motor2Arr, GPIO.OUT)
 GPIO.setup(Motor2Av, GPIO.OUT)
 GPIO.setup(Motor2E, GPIO.OUT)
 
-print("Turning motor on")
+print("Turning motor Avant on")
+GPIO.output(Motor1Arr, GPIO.LOW)
+GPIO.output(Motor1Av, GPIO.HIGH)
+GPIO.output(Motor1E, GPIO.HIGH)
+GPIO.output(Motor2Arr, GPIO.LOW)
+GPIO.output(Motor2Av, GPIO.HIGH)
+GPIO.output(Motor2E, GPIO.HIGH)
+
+sleep(20)
+
+print("Turning motor Arrière on")
 GPIO.output(Motor1Arr, GPIO.HIGH)
 GPIO.output(Motor1Av, GPIO.LOW)
 GPIO.output(Motor1E, GPIO.HIGH)
@@ -25,7 +35,7 @@ GPIO.output(Motor2Arr, GPIO.HIGH)
 GPIO.output(Motor2Av, GPIO.LOW)
 GPIO.output(Motor2E, GPIO.HIGH)
 
-sleep(2)
+sleep(20)
 
 print("Stopping motor")
 GPIO.output(Motor1E, GPIO.LOW)
