@@ -26,6 +26,7 @@ sleep(2)
 
 print("Stopping motor")
 GPIO.output(Motor1E, GPIO.LOW)
+GPIO.output(Motor2A, GPIO.LOW)
 GPIO.output(Motor2E, GPIO.LOW)
 
 GPIO.cleanup()
