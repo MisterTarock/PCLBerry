@@ -20,21 +20,21 @@ class MotorControl:
         GPIO.setup(self.Motor2Arr, GPIO.OUT)
         GPIO.setup(self.Motor2Av, GPIO.OUT)
         GPIO.setup(self.Motor2E, GPIO.OUT)
-        # self.M1For = GPIO.PWM(self.Motor1Av, 100)
-        # self.M2For = GPIO.PWM(self.Motor2Av, 100)
-        # self.M1Bac = GPIO.PWM(self.Motor1Arr, 100)
-        # self.M2Bac = GPIO.PWM(self.Motor2Arr, 100)
+        self.M1For = GPIO.PWM(self.Motor1Av, 100)
+        self.M2For = GPIO.PWM(self.Motor2Av, 100)
+        self.M1Bac = GPIO.PWM(self.Motor1Arr, 100)
+        self.M2Bac = GPIO.PWM(self.Motor2Arr, 100)
     def forward(self,LPWM,RPWM):
         print("Turning motor Forward")
 
-        # self.M1Bac.ChangeDutyCycle(0)
-        # self.M1For.ChangeDutyCycle(LPWM)
-        # self.M2Bac.ChangeDutyCycle(0)
-        # self.M2For.ChangeDutyCycle(RPWM)
-        GPIO.output(self.Motor1Arr, GPIO.LOW)
-        GPIO.output(self.Motor1Av, GPIO.HIGH)
-        GPIO.output(self.Motor2Arr, GPIO.LOW)
-        GPIO.output(self.Motor2Av, GPIO.HIGH)
+        self.M1Bac.ChangeDutyCycle(0)
+        self.M1For.ChangeDutyCycle(LPWM)
+        self.M2Bac.ChangeDutyCycle(0)
+        self.M2For.ChangeDutyCycle(RPWM)
+        # GPIO.output(self.Motor1Arr, GPIO.LOW)
+        # GPIO.output(self.Motor1Av, GPIO.HIGH)
+        # GPIO.output(self.Motor2Arr, GPIO.LOW)
+        # GPIO.output(self.Motor2Av, GPIO.HIGH)
         GPIO.output(self.Motor1E, GPIO.HIGH)
         GPIO.output(self.Motor2E, GPIO.HIGH)
         print("outputs set")
@@ -58,7 +58,11 @@ class MotorControl:
 
 
 motor=MotorControl()
+<<<<<<< HEAD
 motor.forward(100,100)
+=======
+motor.forward(50,50)
+>>>>>>> c1a11fef3355fea58a05e296da176a8e7a85d883
 time.sleep(5)
 motor.stop()
 GPIO.cleanup()
