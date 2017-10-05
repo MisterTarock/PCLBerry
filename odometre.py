@@ -3,8 +3,8 @@ from time import sleep
 
 GPIO.setmode(GPIO.BOARD)
 
-OdoL= 23 #11
-OdoD= 21 #9
+OdoL= 23 
+OdoD= 21
 
 GPIO.setup(OdoD, GPIO.IN)
 GPIO.setup(OdoL, GPIO.IN)
