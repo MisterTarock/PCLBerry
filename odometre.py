@@ -3,7 +3,7 @@ from time import sleep
 
 GPIO.setmode(GPIO.BOARD)
 
-OdoL= 23 
+OdoL= 23
 OdoD= 21
 
 GPIO.setup(OdoD, GPIO.IN)
@@ -24,9 +24,9 @@ def incrementD(channel):
 
 print('Acquisition')
 GPIO.add_event_detect(OdoL, GPIO.RISING, callback=incrementL)
-GPIO.add_event_detect(OdoL, GPIO.FALLING, callback=incrementL)
+#GPIO.add_event_detect(OdoL, GPIO.FALLING, callback=incrementL)
 
 GPIO.add_event_detect(OdoD, GPIO.RISING, callback=incrementD)
-GPIO.add_event_detect(OdoD, GPIO.FALLING, callback=incrementD)
+#GPIO.add_event_detect(OdoD, GPIO.FALLING, callback=incrementD)
 
 GPIO.cleanup()
