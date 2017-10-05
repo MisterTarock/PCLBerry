@@ -34,7 +34,7 @@ def Acquisition():
 
 
 Acquisition()
-sleep(2)
+time.sleep(2)
 
 
 GPIO.cleanup()

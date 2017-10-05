@@ -42,9 +42,9 @@ def stop():
     GPIO.output(Motor2E, GPIO.LOW)
 
 forward()
-sleep(2)
+time.sleep(2)
 backward()
-sleep(2)
+time.sleep(2)
 stop()
 
 
