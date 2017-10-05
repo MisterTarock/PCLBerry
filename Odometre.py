@@ -24,7 +24,7 @@ def incrementD(channel):
     else:                  # if port 21 != 1
         print "Falling edge detected on OdoD"
 
-def Acquisition:
+def Acquisition():
     print('Acquisition')
     GPIO.add_event_detect(OdoL, GPIO.RISING, callback=incrementL)
     #GPIO.add_event_detect(OdoL, GPIO.FALLING, callback=incrementL)
