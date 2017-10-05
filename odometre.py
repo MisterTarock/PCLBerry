@@ -23,8 +23,8 @@ def incrementD(channel):
         print "Falling edge detected on OdoD"
 
 print('Acquisition')
-GPIO.add_event_detect(OdoD, GPIO.RISING, callback=incrementD)
+GPIO.add_event_detect(OdoL, GPIO.RISING, callback=incrementL)
 GPIO.add_event_detect(OdoL, GPIO.FALLING, callback=incrementL)
 
-GPIO.add_event_detect(OdoL, GPIO.RISING, callback=incrementL)
+GPIO.add_event_detect(OdoD, GPIO.RISING, callback=incrementD)
 GPIO.add_event_detect(OdoD, GPIO.FALLING, callback=incrementD)
