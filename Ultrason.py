@@ -5,3 +5,5 @@ GPIO.setmode(GPIO.BOARD)
 
 Trig= 26
 Echo= 24
+
+GPIO.cleanup()
