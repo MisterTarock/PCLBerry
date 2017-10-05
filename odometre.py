@@ -28,3 +28,5 @@ GPIO.add_event_detect(OdoL, GPIO.FALLING, callback=incrementL)
 
 GPIO.add_event_detect(OdoD, GPIO.RISING, callback=incrementD)
 GPIO.add_event_detect(OdoD, GPIO.FALLING, callback=incrementD)
+
+GPIO.cleanup()
