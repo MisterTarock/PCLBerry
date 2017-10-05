@@ -1,6 +1,6 @@
 import RPi.GPIO as GPIO
 import time
-
+#to define whicj type of layout is used for the pin mapping
 GPIO.setmode(GPIO.BOARD)
 
 TRIG= 26  #to send the ultrasonic pulse
