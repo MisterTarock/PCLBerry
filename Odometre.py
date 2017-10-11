@@ -15,6 +15,7 @@ class Odo:
         GPIO.setup(self.OdoL, GPIO.IN)
         self.L = 0
         self.Dist=Dist
+        MotorControl()
         MotorControl.forward()
         self.Acquisition()
 
