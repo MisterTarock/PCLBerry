@@ -4,6 +4,7 @@ import time
 
 class Odo:
     def __init__(self):
+        self.Done=False
         GPIO.setmode(GPIO.BOARD)
 
         self.OdoL = 23
@@ -20,8 +21,9 @@ class Odo:
             print ("Rising edge detected on OdoL")
             self.L+=1
             if self.L==20:
+                self.Done=True
                 print("and One mor wheel turn")
-                return
+
             print ("rising="+str(self.L))
         else:                  # if port 23 != 1
             print ("Falling edge detected on OdoL")
@@ -34,6 +36,8 @@ class Odo:
             print ("Falling edge detected on OdoD")
 
     def Acquisition(self):
+        if self.Done:
+            return 1
 
         print('Acquisition')
         GPIO.add_event_detect(self.OdoL, GPIO.BOTH, callback=self.incrementL, bouncetime=100)
