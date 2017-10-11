@@ -1,51 +1,50 @@
 import RPi.GPIO as GPIO
 import time
 #to define whicj type of layout is used for the pin mapping
-GPIO.setmode(GPIO.BOARD)
 
-Motor1Arr = 16
-Motor1Av = 18
-Motor1E = 22
-Motor2E = 15
-Motor2Arr = 13
-Motor2Av = 11
+class MotorControl:
+    def __init__(self):
 
-GPIO.setup(Motor1Arr, GPIO.OUT)
-GPIO.setup(Motor1Av, GPIO.OUT)
-GPIO.setup(Motor1E, GPIO.OUT)
-GPIO.setup(Motor2Arr, GPIO.OUT)
-GPIO.setup(Motor2Av, GPIO.OUT)
-GPIO.setup(Motor2E, GPIO.OUT)
+        GPIO.setmode(GPIO.BOARD)
 
-def forward():
-    print("Turning motor Forward")
-    GPIO.output(Motor1Arr, GPIO.LOW)
-    GPIO.output(Motor1Av, GPIO.HIGH)
-    GPIO.output(Motor1E, GPIO.HIGH)
-    GPIO.output(Motor2Arr, GPIO.LOW)
-    GPIO.output(Motor2Av, GPIO.HIGH)
-    GPIO.output(Motor2E, GPIO.HIGH)
+        self.Motor1Arr = 16
+        self.Motor1Av = 18
+        self.Motor1E = 22
+        self.Motor2E = 15
+        self.Motor2Arr = 13
+        self.Motor2Av = 11
 
-def backward():
-    print("Turning motor Backward")
-    GPIO.output(Motor1Arr, GPIO.HIGH)
-    GPIO.output(Motor1Av, GPIO.LOW)
-    GPIO.output(Motor1E, GPIO.HIGH)
-    GPIO.output(Motor2Arr, GPIO.HIGH)
-    GPIO.output(Motor2Av, GPIO.LOW)
-    GPIO.output(Motor2E, GPIO.HIGH)
+        GPIO.setup(self.Motor1Arr, GPIO.OUT)
+        GPIO.setup(self.Motor1Av, GPIO.OUT)
+        GPIO.setup(self.Motor1E, GPIO.OUT)
+        GPIO.setup(self.Motor2Arr, GPIO.OUT)
+        GPIO.setup(self.Motor2Av, GPIO.OUT)
+        GPIO.setup(self.Motor2E, GPIO.OUT)
 
-def stop():
-    print("Stopping motor")
-    GPIO.output(Motor1E, GPIO.LOW)
-    GPIO.output(Motor2Arr, GPIO.LOW)
-    GPIO.output(Motor2E, GPIO.LOW)
-
-forward()
-time.sleep(2)
-backward()
-time.sleep(2)
-stop()
+    def forward(self):
+        print("Turning motor Forward")
+        GPIO.output(self.Motor1Arr, GPIO.LOW)
+        GPIO.output(self.Motor1Av, GPIO.HIGH)
+        GPIO.output(self.Motor1E, GPIO.HIGH)
+        GPIO.output(self.Motor2Arr, GPIO.LOW)
+        GPIO.output(self.Motor2Av, GPIO.HIGH)
+        GPIO.output(self.Motor2E, GPIO.HIGH)
+        print("outputs set")
 
 
-GPIO.cleanup()
+    def backward(self):
+        print("Turning motor Backward")
+        GPIO.output(self.Motor1Arr, GPIO.HIGH)
+        GPIO.output(self.Motor1Av, GPIO.LOW)
+        GPIO.output(self.Motor1E, GPIO.HIGH)
+        GPIO.output(self.Motor2Arr, GPIO.HIGH)
+        GPIO.output(self.Motor2Av, GPIO.LOW)
+        GPIO.output(self.Motor2E, GPIO.HIGH)
+
+    def stop(self):
+        print("Stopping motor")
+        GPIO.output(self.Motor1E, GPIO.LOW)
+        GPIO.output(self.Motor2Arr, GPIO.LOW)
+        GPIO.output(self.Motor2E, GPIO.LOW)
+
+
