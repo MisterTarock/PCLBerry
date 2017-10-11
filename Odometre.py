@@ -41,7 +41,7 @@ class Odo:
         GPIO.add_event_detect(self.OdoD, GPIO.BOTH, callback=self.incrementD, bouncetime=100)
         #GPIO.add_event_detect(OdoD, GPIO.FALLING, callback=incrementD)
 Odo()
-time.sleep(2)
+time.sleep(15)
 
 
 GPIO.cleanup()
