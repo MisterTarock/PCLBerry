@@ -26,6 +26,7 @@ def forward():
     GPIO.output(Motor2Arr, GPIO.LOW)
     GPIO.output(Motor2Av, GPIO.HIGH)
     GPIO.output(Motor2E, GPIO.HIGH)
+    Odometre.Odo(20)
 
 def backward():
     print("Turning motor Backward")
@@ -43,7 +44,7 @@ def stop():
     GPIO.output(Motor2E, GPIO.LOW)
 
 forward()
-Odometre.Odo(20)
+
 backward()
 time.sleep(2)
 stop()

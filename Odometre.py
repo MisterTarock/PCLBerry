@@ -23,7 +23,7 @@ class Odo:
             self.L+=1
             if self.L>=self.Dist:
                 self.Done=True
-                print("and One mor wheel turn")
+
 
             print ("rising="+str(self.L))
         #else:                  # if port 23 != 1
