@@ -38,6 +38,8 @@ class Odo:
 
     def Acquisition(self):
         if self.Done:
+            self.L=0
+            GPIO.cleanup()
             return 1
 
         print('Acquisition')
@@ -46,8 +48,6 @@ class Odo:
 
         #GPIO.add_event_detect(self.OdoD, GPIO.BOTH, callback=self.incrementD, bouncetime=100)
         #GPIO.add_event_detect(OdoD, GPIO.FALLING, callback=incrementD)
-Odo(10)
-time.sleep(15)
 
 
-GPIO.cleanup()
+

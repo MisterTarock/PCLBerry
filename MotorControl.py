@@ -26,6 +26,7 @@ def forward():
     GPIO.output(Motor2Arr, GPIO.LOW)
     GPIO.output(Motor2Av, GPIO.HIGH)
     GPIO.output(Motor2E, GPIO.HIGH)
+    print("outputs set")
     Odometre.Odo(20)
 
 def backward():
