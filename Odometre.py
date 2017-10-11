@@ -6,11 +6,11 @@ class Odo:
     def __init__(self):
         GPIO.setmode(GPIO.BOARD)
 
-        OdoL = 23
-        OdoD = 21
+        self.OdoL = 23
+        self.OdoD = 21
 
-        GPIO.setup(OdoD, GPIO.IN)
-        GPIO.setup(OdoL, GPIO.IN)
+        GPIO.setup(self.OdoD, GPIO.IN)
+        GPIO.setup(self.OdoL, GPIO.IN)
         self.L = 0
         self.Acquisition()
 
