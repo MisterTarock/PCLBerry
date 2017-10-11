@@ -31,8 +31,7 @@ class Odo:
             print ("Falling edge detected on OdoD")
 
     def Acquisition(self):
-        Lnow=L
-        Dnow=D
+
         print('Acquisition')
         GPIO.add_event_detect(self.OdoL, GPIO.RISING, callback=self.incrementL)
         #GPIO.add_event_detect(OdoL, GPIO.FALLING, callback=incrementL)
