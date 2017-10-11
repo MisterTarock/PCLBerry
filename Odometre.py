@@ -29,7 +29,7 @@ class Odo:
             self.Done=True
 
 
-            print ("rising="+str(self.L))
+        print ("rising="+str(self.L))
         #else:                  # if port 23 != 1
         #    print ("Falling edge detected on OdoL")
 
