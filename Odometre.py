@@ -58,5 +58,4 @@ class Odo:
         return self.L
 
 
-odo=Odo(100)
-while
+Odo(100)
