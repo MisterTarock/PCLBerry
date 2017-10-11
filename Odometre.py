@@ -59,4 +59,4 @@ class Odo:
         return self.L
 
 
-Odo(100)
+Odo(50)
