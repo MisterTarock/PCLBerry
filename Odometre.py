@@ -21,6 +21,7 @@ class Odo:
             self.L+=1
             if self.L==20:
                 print("and One mor wheel turn")
+                return
             print ("rising="+str(self.L))
         else:                  # if port 23 != 1
             print ("Falling edge detected on OdoL")
