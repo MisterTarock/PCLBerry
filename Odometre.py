@@ -41,6 +41,8 @@ class Odo:
             self.L=0
             GPIO.cleanup()
             return 1
+    def CheckOdo(self):
+        return self.L
 
         print('Acquisition')
         GPIO.add_event_detect(self.OdoL, GPIO.BOTH, callback=self.incrementL, bouncetime=100)
