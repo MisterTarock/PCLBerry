@@ -49,9 +49,10 @@ class Odo:
         print('Acquisition')
         GPIO.add_event_detect(self.OdoL, GPIO.BOTH, callback=self.incrementL, bouncetime=100)
         while(self.Done!=True):
-            
-            if self.sensor:
+
+            if self.sensor.Check():
                 self.motor.stop()
+                self.Done=True
         self.L = 0
         self.motor.stop()
         GPIO.cleanup()
