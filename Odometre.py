@@ -1,5 +1,6 @@
 import RPi.GPIO as GPIO
 import time
+from Ultrason import *
 from MotorControl import *
 #to define whicj type of layout is used for the pin mapping
 
@@ -17,7 +18,7 @@ class Odo:
         self.L = 0
         self.Dist=Dist
         self.motor=MotorControl()
-        self.motor.forward()
+        self.motor.backward()
         self.Acquisition()
 
 
