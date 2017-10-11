@@ -18,6 +18,7 @@ class Odo:
         GPIO.setup(self.OdoL, GPIO.IN)
         self.L = 0
         self.Dist=Dist
+        self.sensor=Ultrason()
         self.motor=MotorControl()
         self.motor.backward()
         self.Acquisition()
@@ -48,7 +49,9 @@ class Odo:
         print('Acquisition')
         GPIO.add_event_detect(self.OdoL, GPIO.BOTH, callback=self.incrementL, bouncetime=100)
         while(self.Done!=True):
-            time.sleep(0.001)
+            
+            if self.sensor:
+                self.motor.stop()
         self.L = 0
         self.motor.stop()
         GPIO.cleanup()
