@@ -3,7 +3,7 @@ import time
 #to define whicj type of layout is used for the pin mapping
 
 class Odo:
-    def __init__(self):
+    def __init__(self,Dist):
         self.Done=False
         GPIO.setmode(GPIO.BOARD)
 
@@ -13,6 +13,7 @@ class Odo:
         GPIO.setup(self.OdoD, GPIO.IN)
         GPIO.setup(self.OdoL, GPIO.IN)
         self.L = 0
+        self.Dist=Dist
         self.Acquisition()
 
 
@@ -20,7 +21,7 @@ class Odo:
         if GPIO.input(self.OdoL):     # if port 23 == 1
             print ("Rising edge detected on OdoL")
             self.L+=1
-            if self.L==20:
+            if self.L>=self.Dist:
                 self.Done=True
                 print("and One mor wheel turn")
 
@@ -45,7 +46,7 @@ class Odo:
 
         GPIO.add_event_detect(self.OdoD, GPIO.BOTH, callback=self.incrementD, bouncetime=100)
         #GPIO.add_event_detect(OdoD, GPIO.FALLING, callback=incrementD)
-Odo()
+Odo(10)
 time.sleep(15)
 
 

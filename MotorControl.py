@@ -1,5 +1,6 @@
 import RPi.GPIO as GPIO
 import time
+import Odometre
 #to define whicj type of layout is used for the pin mapping
 GPIO.setmode(GPIO.BOARD)
 
@@ -42,7 +43,7 @@ def stop():
     GPIO.output(Motor2E, GPIO.LOW)
 
 forward()
-time.sleep(2)
+Odometre.Odo(20)
 backward()
 time.sleep(2)
 stop()
