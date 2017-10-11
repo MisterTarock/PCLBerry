@@ -2,12 +2,13 @@ import RPi.GPIO as GPIO
 import time
 from Ultrason import *
 from MotorControl import *
-#to define whicj type of layout is used for the pin mapping
+
 
 class Odo:
     def __init__(self,Dist):
 
         self.Done=False
+		#to define whicj type of layout is used for the pin mapping
         GPIO.setmode(GPIO.BOARD)
 
         self.OdoL = 23
