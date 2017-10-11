@@ -19,22 +19,22 @@ class Odo:
 
     def incrementL(self,channel):
         if GPIO.input(self.OdoL):     # if port 23 == 1
-            print ("Rising edge detected on OdoL")
+            #print ("Rising edge detected on OdoL")
             self.L+=1
             if self.L>=self.Dist:
                 self.Done=True
                 print("and One mor wheel turn")
 
             print ("rising="+str(self.L))
-        else:                  # if port 23 != 1
-            print ("Falling edge detected on OdoL")
+        #else:                  # if port 23 != 1
+        #    print ("Falling edge detected on OdoL")
 
     def incrementD(self,channel):
 
         if GPIO.input(self.OdoD):     # if port 21 == 1
-            print ("Rising edge detected on OdoD")
-        else:                  # if port 21 != 1
-            print ("Falling edge detected on OdoD")
+        #    print ("Rising edge detected on OdoD")
+        #else:                  # if port 21 != 1
+        #    print ("Falling edge detected on OdoD")
 
     def Acquisition(self):
         if self.Done:
