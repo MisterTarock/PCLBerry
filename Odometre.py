@@ -42,7 +42,7 @@ class Odo:
 
     def Acquisition(self):
         print('Acquisition')
-        while self.Done!=True:
+        while(self.Done!=True):
 
 
             GPIO.add_event_detect(self.OdoL, GPIO.BOTH, callback=self.incrementL, bouncetime=100)
