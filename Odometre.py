@@ -1,5 +1,6 @@
 import RPi.GPIO as GPIO
 import time
+import MotorControl
 #to define whicj type of layout is used for the pin mapping
 
 class Odo:
@@ -14,7 +15,9 @@ class Odo:
         GPIO.setup(self.OdoL, GPIO.IN)
         self.L = 0
         self.Dist=Dist
+        MotorControl.forward()
         self.Acquisition()
+
 
 
     def incrementL(self,channel):
@@ -39,6 +42,7 @@ class Odo:
     def Acquisition(self):
         if self.Done:
             self.L=0
+            MotorControl.stop()
             GPIO.cleanup()
             return 1
         print('Acquisition')
@@ -51,4 +55,4 @@ class Odo:
         return self.L
 
 
-
+Odo(100)
