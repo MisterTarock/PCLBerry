@@ -48,3 +48,4 @@ class MotorControl:
         GPIO.output(self.Motor2E, GPIO.LOW)
 
 
+MotorControl.stop()
