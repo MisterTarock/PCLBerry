@@ -41,13 +41,15 @@ class Odo:
             print ("Falling edge detected on OdoD")
 
     def Acquisition(self):
-        if self.Done:
-            self.L=0
-            MotorControl.stop()
-            GPIO.cleanup()
-            return 1
         print('Acquisition')
-        GPIO.add_event_detect(self.OdoL, GPIO.BOTH, callback=self.incrementL, bouncetime=100)
+        while self.Done!=True:
+
+
+            GPIO.add_event_detect(self.OdoL, GPIO.BOTH, callback=self.incrementL, bouncetime=100)
+        self.L = 0
+        MotorControl.stop()
+        GPIO.cleanup()
+        return 1
         #GPIO.add_event_detect(OdoL, GPIO.FALLING, callback=incrementL)
 
         #GPIO.add_event_detect(self.OdoD, GPIO.BOTH, callback=self.incrementD, bouncetime=100)
@@ -56,4 +58,5 @@ class Odo:
         return self.L
 
 
-Odo(100)
+odo=Odo(100)
+while
