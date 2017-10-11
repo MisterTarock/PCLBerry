@@ -46,7 +46,7 @@ def stop():
 
 done=False
 forward()
-Odometre.Odo()
+Odometre.Odo(20)
 while done==False:
     if Odometre.CheckOdo()==20:
         stop()
