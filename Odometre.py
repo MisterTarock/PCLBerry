@@ -21,6 +21,8 @@ class Odo:
 
 
 
+
+
     def incrementL(self,channel):
         #if GPIO.input(self.OdoL):     # if port 23 == 1
             #print ("Rising edge detected on OdoL")
@@ -42,10 +44,9 @@ class Odo:
 
     def Acquisition(self):
         print('Acquisition')
+        GPIO.add_event_detect(self.OdoL, GPIO.BOTH, callback=self.incrementL, bouncetime=100)
         while(self.Done!=True):
-
-
-            GPIO.add_event_detect(self.OdoL, GPIO.BOTH, callback=self.incrementL, bouncetime=100)
+            time.sleep(0.1)
         self.L = 0
         MotorControl.stop()
         GPIO.cleanup()
