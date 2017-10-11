@@ -19,7 +19,7 @@ class Odo:
         if GPIO.input(self.OdoL):     # if port 23 == 1
             print ("Rising edge detected on OdoL")
             self.L+=1
-            print ("rising="+self.L)
+            print ("rising="+str(self.L))
         else:                  # if port 23 != 1
             print ("Falling edge detected on OdoL")
 
