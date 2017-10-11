@@ -32,9 +32,9 @@ class Odo:
     def incrementD(self,channel):
 
         if GPIO.input(self.OdoD):     # if port 21 == 1
-        #    print ("Rising edge detected on OdoD")
-        #else:                  # if port 21 != 1
-        #    print ("Falling edge detected on OdoD")
+             print ("Rising edge detected on OdoD")
+        else:                  # if port 21 != 1
+            print ("Falling edge detected on OdoD")
 
     def Acquisition(self):
         if self.Done:
@@ -44,7 +44,7 @@ class Odo:
         GPIO.add_event_detect(self.OdoL, GPIO.BOTH, callback=self.incrementL, bouncetime=100)
         #GPIO.add_event_detect(OdoL, GPIO.FALLING, callback=incrementL)
 
-        GPIO.add_event_detect(self.OdoD, GPIO.BOTH, callback=self.incrementD, bouncetime=100)
+        #GPIO.add_event_detect(self.OdoD, GPIO.BOTH, callback=self.incrementD, bouncetime=100)
         #GPIO.add_event_detect(OdoD, GPIO.FALLING, callback=incrementD)
 Odo(10)
 time.sleep(15)
