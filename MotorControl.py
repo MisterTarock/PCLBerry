@@ -44,15 +44,7 @@ def stop():
     GPIO.output(Motor2Arr, GPIO.LOW)
     GPIO.output(Motor2E, GPIO.LOW)
 
-done=False
-forward()
-Odometre.Odo(20)
-while done==False:
-    if Odometre.CheckOdo()==20:
-        stop()
-        done=True
-        time.sleep(2)
-    time.sleep(1)
+
 stop()
 backward()
 time.sleep(2)
