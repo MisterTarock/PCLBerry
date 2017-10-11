@@ -1,6 +1,7 @@
 import RPi.GPIO as GPIO
 import time
 #to define whicj type of layout is used for the pin mapping
+
 class MotorControl:
     def __init__(self):
 

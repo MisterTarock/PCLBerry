@@ -1,6 +1,6 @@
 import RPi.GPIO as GPIO
 import time
-import MotorControl
+from MotorControl import *
 #to define whicj type of layout is used for the pin mapping
 
 class Odo:
