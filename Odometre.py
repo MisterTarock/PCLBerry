@@ -22,11 +22,11 @@ class Odo:
 
 
     def incrementL(self,channel):
-        if GPIO.input(self.OdoL):     # if port 23 == 1
+        #if GPIO.input(self.OdoL):     # if port 23 == 1
             #print ("Rising edge detected on OdoL")
-            self.L+=1
-            if self.L>=self.Dist:
-                self.Done=True
+        self.L+=1
+        if self.L>=self.Dist:
+            self.Done=True
 
 
             print ("rising="+str(self.L))
