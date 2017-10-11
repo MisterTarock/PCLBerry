@@ -8,32 +8,35 @@ OdoD= 21
 
 GPIO.setup(OdoD, GPIO.IN)
 GPIO.setup(OdoL, GPIO.IN)
-
-def incrementL(channel):
-    L=0
+L=0
+def incrementL(Lnow):
+    L=Lnow
     if GPIO.input(OdoL):     # if port 23 == 1
-        print "Rising edge detected on OdoL"
+        print ("Rising edge detected on OdoL")
         L=L+1
-        print L
+        print (L)
     else:                  # if port 23 != 1
-        print "Falling edge detected on OdoL"
+        print ("Falling edge detected on OdoL")
 
-def incrementD(channel):
+def incrementD(Dnow):
+    D=Dnow
     if GPIO.input(OdoD):     # if port 21 == 1
-        print "Rising edge detected on OdoD"
+        print ("Rising edge detected on OdoD")
     else:                  # if port 21 != 1
-        print "Falling edge detected on OdoD"
+        print ("Falling edge detected on OdoD")
 
-def Acquisition():
+def Acquisition(L,D):
+    Lnow=L
+    Dnow=D
     print('Acquisition')
-    GPIO.add_event_detect(OdoL, GPIO.RISING, callback=incrementL)
+    GPIO.add_event_detect(OdoL, GPIO.RISING, callback=incrementL(Lnow))
     #GPIO.add_event_detect(OdoL, GPIO.FALLING, callback=incrementL)
 
-    GPIO.add_event_detect(OdoD, GPIO.RISING, callback=incrementD)
+    GPIO.add_event_detect(OdoD, GPIO.RISING, callback=incrementD(Dnow))
     #GPIO.add_event_detect(OdoD, GPIO.FALLING, callback=incrementD)
-
-
-Acquisition()
+L=0
+D=0
+Acquisition(L,D)
 time.sleep(2)
 
 
