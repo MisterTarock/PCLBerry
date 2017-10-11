@@ -15,8 +15,8 @@ class Odo:
         GPIO.setup(self.OdoL, GPIO.IN)
         self.L = 0
         self.Dist=Dist
-        motor=MotorControl()
-        motor.forward()
+        self.motor=MotorControl()
+        self.motor.forward()
         self.Acquisition()
 
 
@@ -48,7 +48,7 @@ class Odo:
         while(self.Done!=True):
             time.sleep(0.1)
         self.L = 0
-        MotorControl.stop()
+        self.motor.stop()
         GPIO.cleanup()
         return 1
         #GPIO.add_event_detect(OdoL, GPIO.FALLING, callback=incrementL)
