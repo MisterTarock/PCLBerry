@@ -33,10 +33,10 @@ class Odo:
     def Acquisition(self):
 
         print('Acquisition')
-        GPIO.add_event_detect(self.OdoL, GPIO.BOTH, callback=self.incrementL, bouncetime=1000)
+        GPIO.add_event_detect(self.OdoL, GPIO.BOTH, callback=self.incrementL, bouncetime=100)
         #GPIO.add_event_detect(OdoL, GPIO.FALLING, callback=incrementL)
 
-        GPIO.add_event_detect(self.OdoD, GPIO.BOTH, callback=self.incrementD, bouncetime=1000)
+        GPIO.add_event_detect(self.OdoD, GPIO.BOTH, callback=self.incrementD, bouncetime=100)
         #GPIO.add_event_detect(OdoD, GPIO.FALLING, callback=incrementD)
 Odo()
 time.sleep(2)
