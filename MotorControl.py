@@ -48,7 +48,13 @@ done=False
 forward()
 Odometre.Odo()
 while done==False:
-    if
+    if Odometre.CheckOdo()==20:
+        stop()
+        done=True
+        time.sleep(2)
+    time.sleep(1)
+
+
 
 
 
