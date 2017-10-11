@@ -5,6 +5,7 @@ from MotorControl import *
 
 class Odo:
     def __init__(self,Dist):
+
         self.Done=False
 		#to define whicj type of layout is used for the pin mapping
         GPIO.setmode(GPIO.BOARD)
@@ -33,8 +34,7 @@ class Odo:
 
 
         print ("rising="+str(self.L))
-        #else:                  # if port 23 != 1
-        #    print ("Falling edge detected on OdoL")
+
 
     def incrementD(self,channel):
 
@@ -60,4 +60,4 @@ class Odo:
         return self.L
 
 
-Odo(100)
+Odo(50)
