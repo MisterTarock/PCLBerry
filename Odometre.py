@@ -34,6 +34,7 @@ class Odo:
         self.L+=1
         if self.L>=self.Dist:
             self.Done=True
+            self.motor.stop()
             GPIO.cleanup()
 
 
