@@ -17,12 +17,14 @@ class Odo:
         GPIO.setup(self.OdoD, GPIO.IN)
         GPIO.setup(self.OdoL, GPIO.IN)
         self.L = 0
+        self.LastL=0
+        self.LastD=0
         self.D = 0
         self.Dist=Dist
         print(self.Dist)
         self.sensor=Ultrason()
         self.motor=MotorControl()
-        self.motor.forward()
+        self.motor.forward(0.5,0.5)
         self.Acquisition()
 
 
@@ -33,6 +35,11 @@ class Odo:
         #if GPIO.input(self.OdoL):     # if port 23 == 1
             #print ("Rising edge detected on OdoL")
         self.L+=1
+        if self.LastL==10:
+            self.Regulation()
+            self.LastD=0
+            self.LastL=0
+
         if self.L>=self.Dist:
             self.Done=True
             self.motor.stop()
@@ -77,6 +84,13 @@ class Odo:
     def Close(self):
         print(self.L, self.D)
         GPIO.cleanup()
+    def Regulation(self):
+        error=self.LastL-self.LastD
+        PWMD=0.5+(error/0.2)
+        print("Modiying right wheel PWM to"+str(PWMD))
+        self.motor.forward(0.5,PWMD)
+
+
 
 
 Odo(100)
