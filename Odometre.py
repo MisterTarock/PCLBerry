@@ -49,11 +49,15 @@ class Odo:
     def Acquisition(self):
         print('Acquisition')
         GPIO.add_event_detect(self.OdoL, GPIO.BOTH, callback=self.incrementL, bouncetime=100)
+        reset=False
         while(self.Done!=True):
 
             while self.sensor.Check():
                 self.motor.stop()
-
+                reset=True
+            if reset==True:
+                self.motor.forward()
+                reset=False
 
         self.L = 0
         self.motor.stop()
