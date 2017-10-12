@@ -21,11 +21,11 @@ class Ultrason:
     GPIO.output(self.TRIG, False)
 
     while GPIO.input(self.ECHO)==0:
-      pulse_start = time.time()
+      self.pulse_start = time.time()
     while GPIO.input(self.ECHO)==1:
-      pulse_end = time.time()
+      self.pulse_end = time.time()
 
-    pulse_duration = pulse_end - pulse_start #to mesure the time of the ECHO
+    pulse_duration = self.pulse_end - self.pulse_start #to mesure the time of the ECHO
     distance = pulse_duration * 17150
     distance = round(distance, 2)
     print ("Distance:",distance,"cm")
