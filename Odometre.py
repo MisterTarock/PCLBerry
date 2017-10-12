@@ -35,7 +35,8 @@ class Odo:
         if self.L>=self.Dist:
             self.Done=True
             self.motor.stop()
-            self.close()
+            time.sleep(1)
+            self.Close()
         print ("rising="+str(self.L))
 
 
