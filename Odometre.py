@@ -19,6 +19,7 @@ class Odo:
         self.L = 0
         self.LastL=0
         self.LastD=0
+        self.PWMD=0.5
         self.D = 0
         self.Dist=Dist
         print(self.Dist)
@@ -67,7 +68,7 @@ class Odo:
                 time.sleep(2)
                 reset=True
             if reset==True:
-                self.motor.forward()
+                self.motor.forward(0.5,self.PWMD)
                 reset=False
 
         print(self.L, self.D)
@@ -90,6 +91,7 @@ class Odo:
         print(self.LastL,self.LastD)
         error=self.LastL-self.LastD
         PWMD=0.5+(error/0.2)/100
+        self.PWMD=PWMD
         print("Modiying right wheel PWM to"+str(PWMD))
         self.motor.forward(0.5,PWMD)
 
