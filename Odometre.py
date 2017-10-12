@@ -62,10 +62,11 @@ class Odo:
                 self.motor.forward()
                 reset=False
 
+        print(self.L, self.D)
         self.L = 0
         self.D=0
         self.motor.stop()
-        print(self.L, self.D)
+
         GPIO.cleanup()
         return 1
         #GPIO.add_event_detect(OdoL, GPIO.FALLING, callback=incrementL)
