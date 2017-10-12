@@ -63,6 +63,7 @@ class Odo:
                 reset=False
 
         self.L = 0
+        self.D=0
         self.motor.stop()
         GPIO.cleanup()
         return 1
