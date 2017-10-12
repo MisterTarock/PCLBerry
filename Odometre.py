@@ -37,7 +37,7 @@ class Odo:
             #print ("Rising edge detected on OdoL")
         self.L+=1
         self.LastL+=1
-        if self.LastL==10:
+        if self.LastL==5:
             self.Regulation()
             self.LastD=0
             self.LastL=0
