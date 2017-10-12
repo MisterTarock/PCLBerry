@@ -35,8 +35,9 @@ class Odo:
         if self.L>=self.Dist:
             self.Done=True
             self.motor.stop()
-            GPIO.cleanup()
 
+            GPIO.cleanup()
+            return 1
 
         print ("rising="+str(self.L))
 
