@@ -87,6 +87,7 @@ class Odo:
         print(self.L, self.D)
         GPIO.cleanup()
     def Regulation(self):
+        print(self.LastL,self.LastD)
         error=self.LastL-self.LastD
         PWMD=0.5+(error/0.2)
         print("Modiying right wheel PWM to"+str(PWMD))
