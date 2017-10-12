@@ -35,11 +35,7 @@ class Odo:
         if self.L>=self.Dist:
             self.Done=True
             self.motor.stop()
-
-            GPIO.cleanup()
-
-            return 1
-
+            self.close()
         print ("rising="+str(self.L))
 
 
@@ -54,7 +50,7 @@ class Odo:
         print('Acquisition')
         GPIO.add_event_detect(self.OdoL, GPIO.BOTH, callback=self.incrementL, bouncetime=100)
         reset=False
-        while(self.Done!=True & self.incrementL(1)!=1):
+        while(self.Done!=True):
 
             while self.sensor.Check():
                 self.motor.stop()
@@ -74,6 +70,8 @@ class Odo:
         #GPIO.add_event_detect(OdoD, GPIO.FALLING, callback=incrementD)
     def CheckOdo(self):
         return self.L
+    def Close(self):
+        GPIO.cleanup()
 
 
 Odo(50)
