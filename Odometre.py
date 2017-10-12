@@ -18,6 +18,7 @@ class Odo:
         GPIO.setup(self.OdoL, GPIO.IN)
         self.L = 0
         self.Dist=Dist
+        print(self.Dist)
         self.sensor=Ultrason()
         self.motor=MotorControl()
         self.motor.forward()

@@ -28,7 +28,7 @@ class Ultrason:
     pulse_duration = self.pulse_end - self.pulse_start #to mesure the time of the ECHO
     distance = pulse_duration * 17150
     distance = round(distance, 2)
-    print ("Distance:",distance,"cm")
+    #print ("Distance:",distance,"cm")
     if distance <= 7:
       return True
 
