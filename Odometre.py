@@ -79,4 +79,4 @@ class Odo:
         GPIO.cleanup()
 
 
-Odo(300)
+Odo(50)
