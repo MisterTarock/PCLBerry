@@ -35,6 +35,7 @@ class Odo:
         #if GPIO.input(self.OdoL):     # if port 23 == 1
             #print ("Rising edge detected on OdoL")
         self.L+=1
+        self.LastL+=1
         if self.LastL==10:
             self.Regulation()
             self.LastD=0
@@ -51,6 +52,7 @@ class Odo:
 
     def incrementD(self,channel):
         self.D+=1
+        self.LastD+=1
 
     def Acquisition(self):
         print('Acquisition')
