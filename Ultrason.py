@@ -12,11 +12,10 @@ class Ultrason:
     print ("Distance Measurement In Progress")
     GPIO.setup(self.TRIG,GPIO.OUT)
     GPIO.setup(self.ECHO,GPIO.IN)
+    GPIO.output(self.TRIG, False)
 
   def Check(self):
-    print ("Waiting For Sensor To Settle")
-    GPIO.output(self.TRIG, False)
-    time.sleep(2)
+    #print ("Waiting For Sensor To Settle")
     GPIO.output(self.TRIG, True)
     time.sleep(0.00001)
     GPIO.output(self.TRIG, False)

@@ -56,10 +56,10 @@ class MotorControl:
         GPIO.output(self.Motor2E, GPIO.LOW)
 
 
-motor=MotorControl()
-motor.forward()
-time.sleep(5)
-motor.backward()
-time.sleep(5)
-motor.stop()
-GPIO.cleanup()
+# motor=MotorControl()
+# motor.forward()
+# time.sleep(5)
+# motor.backward()
+# time.sleep(5)
+# motor.stop()
+# GPIO.cleanup()
