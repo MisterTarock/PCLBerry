@@ -17,6 +17,7 @@ class Odo:
         GPIO.setup(self.OdoD, GPIO.IN)
         GPIO.setup(self.OdoL, GPIO.IN)
         self.L = 0
+        self.D = 0
         self.Dist=Dist
         print(self.Dist)
         self.sensor=Ultrason()
@@ -36,24 +37,24 @@ class Odo:
             self.Done=True
             self.motor.stop()
             time.sleep(1)
+            print(self.L,self.D)
             self.Close()
-        print ("rising="+str(self.L))
+        #print ("rising="+str(self.L))
 
 
     def incrementD(self,channel):
+        self.D+=1
 
-        if GPIO.input(self.OdoD):     # if port 21 == 1
-             print ("Rising edge detected on OdoD")
-        else:                  # if port 21 != 1
-            print ("Falling edge detected on OdoD")
 
     def Acquisition(self):
         print('Acquisition')
         GPIO.add_event_detect(self.OdoL, GPIO.BOTH, callback=self.incrementL, bouncetime=100)
+        GPIO.add_event_detect(self.OdoD, GPIO.BOTH, callback=self.incrementD, bouncetime=100)
         reset=False
         while(self.Done!=True):
 
             while self.sensor.Check():
+
                 self.motor.stop()
                 time.sleep(2)
                 reset=True
