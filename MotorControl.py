@@ -30,7 +30,7 @@ class MotorControl:
         self.M1Bac.ChangeDutyCycle(0)
         self.M1For.ChangeDutyCycle(1)
         self.M2Bac.ChangeDutyCycle(0)
-        self.M2For.ChangeDutyCycle(0.25)
+        self.M2For.ChangeDutyCycle(1)
         # GPIO.output(self.Motor1Arr, GPIO.LOW)
         # GPIO.output(self.Motor1Av, GPIO.HIGH)
         # GPIO.output(self.Motor2Arr, GPIO.LOW)
