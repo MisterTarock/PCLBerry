@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d97c402b-7ec4-4721-a991-c4701b9cbe81" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MotorControl.py" afterPath="$PROJECT_DIR$/MotorControl.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Odometre.py" afterPath="$PROJECT_DIR$/Odometre.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -45,11 +44,11 @@
       <file leaf-file-name="MotorControl.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MotorControl.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="372">
-              <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+            <state relative-caret-position="526">
+              <caret line="33" column="8" lean-forward="false" selection-start-line="33" selection-start-column="8" selection-end-line="36" selection-end-column="45" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
-                <marker date="1507800439861" expanded="true" signature="143:806" ph="..." />
+                <marker date="1507800550026" expanded="true" signature="143:814" ph="..." />
               </folding>
             </state>
           </provider>
@@ -84,8 +83,8 @@
       <list>
         <option value="$PROJECT_DIR$/stop.py" />
         <option value="$PROJECT_DIR$/Ultrason.py" />
-        <option value="$PROJECT_DIR$/MotorControl.py" />
         <option value="$PROJECT_DIR$/Odometre.py" />
+        <option value="$PROJECT_DIR$/MotorControl.py" />
       </list>
     </option>
   </component>
@@ -451,7 +450,7 @@
           <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
-            <marker date="1507800439861" expanded="true" signature="143:806" ph="..." />
+            <marker date="1507800550026" expanded="true" signature="143:814" ph="..." />
           </folding>
         </state>
       </provider>
@@ -499,11 +498,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/MotorControl.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+        <state relative-caret-position="526">
+          <caret line="33" column="8" lean-forward="false" selection-start-line="33" selection-start-column="8" selection-end-line="36" selection-end-column="45" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
-            <marker date="1507800439861" expanded="true" signature="143:806" ph="..." />
+            <marker date="1507800550026" expanded="true" signature="143:814" ph="..." />
           </folding>
         </state>
       </provider>
