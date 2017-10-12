@@ -34,6 +34,7 @@ class Odo:
         self.L+=1
         if self.L>=self.Dist:
             self.Done=True
+            GPIO.cleanup()
 
 
         print ("rising="+str(self.L))
