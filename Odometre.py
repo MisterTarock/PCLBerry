@@ -54,6 +54,8 @@ class Odo:
                 self.motor.stop()
                 self.Done=True
         self.L = 0
+        self.motor.backward()
+        time.sleep(2)
         self.motor.stop()
         GPIO.cleanup()
         return 1

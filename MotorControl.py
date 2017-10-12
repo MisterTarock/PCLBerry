@@ -20,10 +20,10 @@ class MotorControl:
         GPIO.setup(self.Motor2Arr, GPIO.OUT)
         GPIO.setup(self.Motor2Av, GPIO.OUT)
         GPIO.setup(self.Motor2E, GPIO.OUT)
-        self.M1bac = GPIO.PWM(self.Motor1Av, 100)
-        self.M2bac = GPIO.PWM(self.Motor2Av, 100)
-        self.M1for = GPIO.PWM(self.Motor1Arr, 100)
-        self.M2for = GPIO.PWM(self.Motor2Arr, 100)
+        self.M1for = GPIO.PWM(self.Motor1Av, 100)
+        self.M2for = GPIO.PWM(self.Motor2Av, 100)
+        self.M1bac = GPIO.PWM(self.Motor1Arr, 100)
+        self.M2bac = GPIO.PWM(self.Motor2Arr, 100)
     def forward(self):
         print("Turning motor Forward")
 
