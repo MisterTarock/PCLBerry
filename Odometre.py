@@ -20,7 +20,7 @@ class Odo:
         self.Dist=Dist
         self.sensor=Ultrason()
         self.motor=MotorControl()
-        self.motor.backward()
+        self.motor.forward()
         self.Acquisition()
 
 
