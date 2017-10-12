@@ -44,7 +44,7 @@ class Odo:
 
     def incrementD(self,channel):
         self.D+=1
-
+        print("rising edge right:" +str(self.D))
 
     def Acquisition(self):
         print('Acquisition')
