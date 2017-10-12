@@ -54,6 +54,7 @@ class Odo:
 
             while self.sensor.Check():
                 self.motor.stop()
+                time.sleep(5)
                 reset=True
             if reset==True:
                 self.motor.forward()
