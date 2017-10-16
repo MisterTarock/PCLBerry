@@ -28,7 +28,7 @@ class MotorControl:
         print("Turning motor Forward")
 
         self.M1Bac.ChangeDutyCycle(0)
-        self.M1For.ChangeDutyCycle(0)
+        self.M1For.ChangeDutyCycle(LPWM)
         self.M2Bac.ChangeDutyCycle(0)
         self.M2For.ChangeDutyCycle(RPWM)
         # GPIO.output(self.Motor1Arr, GPIO.LOW)
