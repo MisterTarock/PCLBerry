@@ -2,17 +2,14 @@ import RPi.GPIO as GPIO
 import time
 from Ultrason import *
 from MotorControl import *
-from math import *
 
 
 class Odo:
-    def __init__(self): #in centimeters
+    def __init__(self,Dist):
 
         self.Done=False
 		#to define whicj type of layout is used for the pin mapping
         GPIO.setmode(GPIO.BOARD)
-
-
 
         self.OdoL = 23
         self.OdoD = 21
@@ -24,36 +21,15 @@ class Odo:
         self.LastD=0
         self.PWMD=0.5
         self.D = 0
-
+        self.Dist=Dist
+        print(self.Dist)
         self.sensor=Ultrason()
         self.motor=MotorControl()
-
-
-    def setDistance(self,Dist):
-        wheelPerim = 7 * 3.14
-        wheelTurns = Dist / wheelPerim
-        clicks = wheelTurns * 20
-        self.Dist = clicks
-        print(self.Dist)
-        self.motor.forward(0.5, 0.5)
+        self.motor.forward(0.5,0.5)
         self.Acquisition()
 
-    def setTurn(self,direction,radius,angle):
-        outsidePerimeter = 2 * 3.1416 * (radius + 8)
-        insidePerimeter = 2 * 3.1416 * (radius - 8)
-        innerDistance = (insidePerimeter / 360) * angle
-        outerDistance = (outsidePerimeter / 360) * angle
-        wheelPerim = 7 * 3.1416
 
-        if direction == "left":
-            wheelTurns = innerDistance/wheelPerim
-            self.motor.left(innerDistance,outerDistance)
-        if direction == "right":
-            wheelTurns = outerDistance/wheelPerim
-            self.motor.right(innerDistance,outerDistance)
-        clicks = wheelTurns * 20
-        self.Dist = clicks
-        self.Acquisition()
+
 
 
     def incrementL(self,channel):
@@ -70,6 +46,7 @@ class Odo:
             self.Done=True
             self.motor.stop()
             time.sleep(1)
+
             self.Close()
         #print ("rising="+str(self.L))
 
@@ -121,6 +98,4 @@ class Odo:
 
 
 
-odo=Odo()
-odo.setDistance(100)
-odo.setTurn("right",1,90)
+Odo(100)
