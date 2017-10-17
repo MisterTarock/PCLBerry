@@ -5,8 +5,8 @@ Motor1Av = 18
 Motor2Av = 12
 GPIO.setup(Motor1Av, GPIO.OUT)
 GPIO.setup(Motor2Av, GPIO.OUT)
-M1For = GPIO.PWM(Motor1Av, 50)
-M2For = GPIO.PWM(Motor2Av, 50)
+M1For = GPIO.PWM(Motor1Av, 100)
+M2For = GPIO.PWM(Motor2Av, 100)
 print("turning on")
 M1For.start(50)
 M2For.start(50)
