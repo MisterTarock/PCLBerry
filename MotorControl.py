@@ -57,10 +57,10 @@ class MotorControl:
 
 
 
-motor=MotorControl()
-motor.forward(0.5,0.5)
-time.sleep(5)
-motor.backward()
-time.sleep(5)
-motor.stop()
-GPIO.cleanup()
+# motor=MotorControl()
+# motor.forward(0.5,0.5)
+# time.sleep(5)
+# motor.backward()
+# time.sleep(5)
+# motor.stop()
+# GPIO.cleanup()
