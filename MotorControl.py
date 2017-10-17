@@ -55,6 +55,10 @@ class MotorControl:
         print("Stopping motor")
         GPIO.output(self.Motor1E, GPIO.LOW)
         GPIO.output(self.Motor2E, GPIO.LOW)
+        self.M1Bac.ChangeDutyCycle(0)
+        self.M1For.ChangeDutyCycle(100)
+        self.M2Bac.ChangeDutyCycle(0)
+        self.M2For.ChangeDutyCycle(100)
 
 
 
