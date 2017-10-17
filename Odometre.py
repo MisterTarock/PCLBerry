@@ -25,7 +25,7 @@ class Odo:
         print(self.Dist)
         self.sensor=Ultrason()
         self.motor=MotorControl()
-        self.motor.forward(0,0.5)
+        self.motor.forward(0.1,0.5)
         self.Acquisition()
 
 
@@ -68,7 +68,7 @@ class Odo:
                 time.sleep(2)
                 reset=True
             if reset==True:
-                self.motor.forward(0.5,self.PWMD)
+                self.motor.forward(0.1,self.PWMD)
                 reset=False
 
         print(self.L, self.D)
