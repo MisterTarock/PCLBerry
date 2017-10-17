@@ -25,7 +25,7 @@ class Odo:
         print(self.Dist)
         self.sensor=Ultrason()
         self.motor=MotorControl()
-        self.motor.forward(0.5,0.5)
+        self.motor.forward(1,0.5)
         self.Acquisition()
 
 
