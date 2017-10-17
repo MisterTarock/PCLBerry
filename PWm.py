@@ -2,7 +2,7 @@ import RPi.GPIO as GPIO
 import time
 GPIO.setmode(GPIO.BOARD)
 Motor1Av = 18
-Motor2Av = 11
+Motor2Av = 16
 GPIO.setup(Motor1Av, GPIO.OUT)
 GPIO.setup(Motor2Av, GPIO.OUT)
 M1For = GPIO.PWM(Motor1Av, 100)
