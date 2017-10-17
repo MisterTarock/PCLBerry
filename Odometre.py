@@ -19,16 +19,16 @@ class Odo:
         self.L = 0
         self.LastL=0
         self.LastD=0
-        self.PWMD=90
+        self.PWMD=50
         self.D = 0
         self.Dist=Dist
         print(self.Dist)
         self.sensor=Ultrason()
         self.motor=MotorControl()
-        self.motor.forward(90,self.PWMD)
-        time.sleep(0.5)
-        self.PWMD=50
-        self.motor.forward(50, self.PWMD)
+        self.motor.forward(50,self.PWMD)
+        # time.sleep(0.5)
+        # self.PWMD=50
+        # self.motor.forward(50, self.PWMD)
         self.Acquisition()
 
 
@@ -71,7 +71,7 @@ class Odo:
                 time.sleep(2)
                 reset=True
             if reset==True:
-                self.motor.forward(90, 90)
+                # self.motor.forward(90, 90)
                 self.motor.forward(50,self.PWMD)
                 reset=False
 
@@ -94,7 +94,7 @@ class Odo:
     def Regulation(self):
         print(self.LastL,self.LastD)
         error=self.LastL-self.LastD
-        self.PWMD+=(error/0.2)
+        self.PWMD+=(error/0.3)
 
         print("Modiying right wheel PWM to"+str(self.PWMD))
         self.motor.forward(50,self.PWMD)
