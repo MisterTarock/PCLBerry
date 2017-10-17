@@ -94,7 +94,7 @@ class Odo:
     def Regulation(self):
         print(self.LastL,self.LastD)
         error=self.LastL-self.LastD
-        self.PWMD+=(error/0.45)
+        self.PWMD+=(error/0.4)
 
         print("Modiying right wheel PWM to"+str(self.PWMD))
         self.motor.forward(50,self.PWMD)
