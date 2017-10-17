@@ -58,7 +58,7 @@ class MotorControl:
         self.M1Bac.ChangeDutyCycle(0)
         self.M1For.ChangeDutyCycle(100)
         self.M2Bac.ChangeDutyCycle(0)
-        self.M2For.ChangeDutyCycle(100)
+        self.M2For.ChangeDutyCycle(0)
 
 
 
