@@ -10,3 +10,4 @@ M1For.ChangeDutyCycle(100)
 
 time.sleep(2)
 M1For.ChangeDutyCycle(0)
+GPIO.cleanup()
