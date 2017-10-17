@@ -39,7 +39,7 @@ class Odo:
             #print ("Rising edge detected on OdoL")
         self.L+=1
         self.LastL+=1
-        if self.LastL==5:
+        if self.LastL==2:
             self.Regulation()
             self.LastD=0
             self.LastL=0
@@ -70,6 +70,7 @@ class Odo:
                 time.sleep(2)
                 reset=True
             if reset==True:
+                self.motor.forward(90, 90)
                 self.motor.forward(50,self.PWMD)
                 reset=False
 
