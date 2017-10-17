@@ -19,13 +19,13 @@ class Odo:
         self.L = 0
         self.LastL=0
         self.LastD=0
-        self.PWMD=50
+        self.PWMD=90
         self.D = 0
         self.Dist=Dist
         print(self.Dist)
         self.sensor=Ultrason()
         self.motor=MotorControl()
-        self.motor.forward(50,self.PWMD)
+        self.motor.forward(90,self.PWMD)
         self.Acquisition()
 
 
