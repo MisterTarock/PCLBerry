@@ -5,7 +5,7 @@ import time
 class MotorControl:
     def __init__(self):
 		#to define which type of layout is used for the pin mapping
-        #GPIO.setmode(GPIO.BOARD)
+        GPIO.setmode(GPIO.BOARD)
 
         self.Motor1Arr = 16
         self.Motor1Av = 18
@@ -58,7 +58,7 @@ class MotorControl:
 
 
 motor=MotorControl()
-motor.forward(0,100)
+motor.forward(50,100)
 time.sleep(5)
 motor.stop()
 GPIO.cleanup()
