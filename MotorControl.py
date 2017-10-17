@@ -11,8 +11,8 @@ class MotorControl:
         self.Motor1Av = 18
         self.Motor1E = 22
         self.Motor2E = 15
-        self.Motor2Arr = 13
-        self.Motor2Av = 11
+        self.Motor2Arr = 11
+        self.Motor2Av = 13
 
         GPIO.setup(self.Motor1Arr, GPIO.OUT)
         GPIO.setup(self.Motor1Av, GPIO.OUT)
