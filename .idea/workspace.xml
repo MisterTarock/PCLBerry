@@ -32,8 +32,8 @@
       <file leaf-file-name="MotorControl.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MotorControl.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="682">
-              <caret line="60" column="16" lean-forward="false" selection-start-line="60" selection-start-column="16" selection-end-line="60" selection-end-column="16" />
+            <state relative-caret-position="484">
+              <caret line="29" column="8" lean-forward="false" selection-start-line="29" selection-start-column="10" selection-end-line="32" selection-end-column="42" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
               </folding>
@@ -876,8 +876,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/MotorControl.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="682">
-          <caret line="60" column="16" lean-forward="false" selection-start-line="60" selection-start-column="16" selection-end-line="60" selection-end-column="16" />
+        <state relative-caret-position="484">
+          <caret line="29" column="8" lean-forward="false" selection-start-line="29" selection-start-column="10" selection-end-line="32" selection-end-column="42" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
           </folding>
