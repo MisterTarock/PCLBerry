@@ -1,7 +1,7 @@
 import RPi.GPIO as GPIO
 import time
 GPIO.setmode(GPIO.BOARD)
-Motor1Av = 13
+Motor1Av = 11
 Motor2Av = 16
 Motor1E = 22
 Motor2E = 15
