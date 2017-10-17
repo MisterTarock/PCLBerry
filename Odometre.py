@@ -26,6 +26,7 @@ class Odo:
         self.sensor=Ultrason()
         self.motor=MotorControl()
         self.motor.forward(90,self.PWMD)
+        time.sleep(0.5)
         self.PWMD=50
         self.motor.forward(50, self.PWMD)
         self.Acquisition()
