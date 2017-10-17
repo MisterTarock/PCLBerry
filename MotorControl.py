@@ -35,8 +35,8 @@ class MotorControl:
         # GPIO.output(self.Motor1Av, GPIO.HIGH)
         # GPIO.output(self.Motor2Arr, GPIO.LOW)
         # GPIO.output(self.Motor2Av, GPIO.HIGH)
-        GPIO.output(self.Motor1E, GPIO.HIGH)
-        GPIO.output(self.Motor2E, GPIO.LOW)
+        GPIO.output(self.Motor1E, GPIO.LOW)
+        GPIO.output(self.Motor2E, GPIO.HIGH)
         print("outputs set")
 
 
