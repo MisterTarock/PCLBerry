@@ -27,10 +27,10 @@ class MotorControl:
     def forward(self,LPWM,RPWM):
         print("Turning motor Forward")
 
-        self.M1Bac.ChangeDutyCycle(LPWM)
-        self.M1For.ChangeDutyCycle(0)
-        self.M2Bac.ChangeDutyCycle(RPWM)
-        self.M2For.ChangeDutyCycle(0)
+        self.M1Bac.ChangeDutyCycle(0)
+        self.M1For.ChangeDutyCycle(50)
+        self.M2Bac.ChangeDutyCycle(0)
+        self.M2For.ChangeDutyCycle(50)
         # GPIO.output(self.Motor1Arr, GPIO.LOW)
         # GPIO.output(self.Motor1Av, GPIO.HIGH)
         # GPIO.output(self.Motor2Arr, GPIO.LOW)
