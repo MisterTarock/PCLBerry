@@ -1,5 +1,7 @@
 from MotorControl import *
 import RPi.GPIO as GPIO
-motor=MotorControl()
-motor.stop()
-GPIO.cleanup()
+class stopAll:
+    def __init__(self):
+        motor=MotorControl()
+        motor.stop()
+        GPIO.cleanup()

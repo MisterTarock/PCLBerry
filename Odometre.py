@@ -1,6 +1,7 @@
 import RPi.GPIO as GPIO
 import time
 from Ultrason import *
+import stop.py
 from MotorControl import *
 
 
@@ -103,3 +104,4 @@ class Odo:
 
 
 Odo(100)
+stop.py
