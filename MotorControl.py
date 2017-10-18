@@ -60,9 +60,9 @@ class MotorControl:
         self.M1For
         print(SpeedRatio)
         self.M1Bac.ChangeDutyCycle(0)
-        self.M1For.ChangeDutyCycle(50)
+        self.M1For.ChangeDutyCycle(50*SpeedRatio)
         self.M2Bac.ChangeDutyCycle(0)
-        self.M2For.ChangeDutyCycle(50*SpeedRatio)
+        self.M2For.ChangeDutyCycle(50)
         GPIO.output(self.Motor1E, GPIO.HIGH)
         GPIO.output(self.Motor2E, GPIO.HIGH)
 
