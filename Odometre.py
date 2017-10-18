@@ -77,7 +77,7 @@ class Odo:
         #     self.LastL=0
 
 
-        if self.L>=self.Dist:
+        if (self.L>=self.Dist or self.D>=self.Dist):
             self.Done=True
             self.motor.stop()
             time.sleep(1)
