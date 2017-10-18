@@ -68,6 +68,7 @@ class Odo:
             self.Regulation()
             self.LastD=0
             self.LastL=0
+            self.L=0
 
         if self.L>=self.Dist:
             self.Done=True
