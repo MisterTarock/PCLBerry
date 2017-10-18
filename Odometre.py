@@ -110,8 +110,8 @@ class Odo:
         self.L = 0
         self.D=0
         self.motor.stop()
-        motor.backward()
-        time.sleep(2)
+        # motor.backward()
+        # time.sleep(2)
         self.FirsTime=True
         self.Done=False
 
