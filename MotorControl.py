@@ -67,8 +67,8 @@ class MotorControl:
         GPIO.output(self.Motor1Arr, GPIO.HIGH)
         GPIO.output(self.Motor1Av, GPIO.LOW)
         GPIO.output(self.Motor1E, GPIO.HIGH)
-        GPIO.output(self.Motor2Arr, GPIO.HIGH)
-        GPIO.output(self.Motor2Av, GPIO.HIGH)
+        GPIO.output(self.Motor2Arr, GPIO.LOW)
+        GPIO.output(self.Motor2Av, GPIO.LOW)
         GPIO.output(self.Motor2E, GPIO.HIGH)
 
 

@@ -32,14 +32,17 @@ class Odo:
         # self.motor.forward(50, self.PWMD)
 
 
-    def setDistance(self,Dist):
+    def setDistance(self,Dist,Dir):
         self.Turning=False
         wheelPerim = 7 * 3.14
         wheelTurns = Dist / wheelPerim
         clicks = wheelTurns * 20
         self.Dist = clicks
         print(self.Dist)
-        self.motor.forward(70, 70)
+        if Dir=="For":
+            self.motor.forward(70, 70)
+        if Dir=="Bac":
+            self.motor.backward()
         self.Acquisition()
 
     def setTurn(self,direction,radius,angle):
@@ -110,9 +113,7 @@ class Odo:
         self.L = 0
         self.D=0
         self.motor.stop()
-        time.sleep(1)
-        motor.backward()
-        time.sleep(2)
+
         self.FirsTime=True
         self.Done=False
 
@@ -140,8 +141,13 @@ class Odo:
 
 
 odo=Odo()
-odo.setDistance(50)
+odo.setDistance(50,"For")
+time.sleep(1)
 odo.setTurn("right",10,90)
+time.sleep(1)
 odo.setTurn("left",10,90)
+time.sleep(1)
+odo.setDistance(50,"Bac")
+
 #odo.setTurn("right",30,90)
 odo.Close()
