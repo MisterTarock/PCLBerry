@@ -51,11 +51,12 @@ class Odo:
             wheelTurns = innerDistance/wheelPerim
             self.motor.left(innerDistance,outerDistance)
         if direction == "right":
+
             wheelTurns = outerDistance/wheelPerim
             self.motor.right(innerDistance,outerDistance)
         clicks = wheelTurns * 20
         self.Dist = clicks
-        #self.Acquisition()
+        self.Acquisition()
 
 
     def incrementL(self,channel):
@@ -104,6 +105,7 @@ class Odo:
 
 
 
+
         return 1
         #GPIO.add_event_detect(OdoL, GPIO.FALLING, callback=incrementL)
 
@@ -126,5 +128,6 @@ class Odo:
 
 odo=Odo()
 odo.setDistance(100)
+odo=Odo()
 odo.setTurn("right",100,90)
 odo.Close()
