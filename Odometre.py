@@ -32,6 +32,7 @@ class Odo:
 
 
     def setDistance(self,Dist):
+        self.Turning=False
         wheelPerim = 7 * 3.14
         wheelTurns = Dist / wheelPerim
         clicks = wheelTurns * 20
@@ -41,6 +42,7 @@ class Odo:
         self.Acquisition()
 
     def setTurn(self,direction,radius,angle):
+        self.Turning=True
         outsidePerimeter = 2 * 3.1416 * (radius + 8)
         insidePerimeter = 2 * 3.1416 * (radius - 8)
         innerDistance = (insidePerimeter / 360) * angle
@@ -65,7 +67,7 @@ class Odo:
 
         self.L+=1
         self.LastL+=1
-        if self.LastL==5:
+        if self.LastL==5 & self.Turning==False:
             self.Regulation()
             self.LastD=0
             self.LastL=0
