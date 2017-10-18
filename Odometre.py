@@ -97,11 +97,11 @@ class Odo:
         reset=False
         while(self.Done!=True):
 
-            while (self.sensor.Check() & self.Turning==False):
-
-                self.motor.stop()
-                time.sleep(2)
-                reset=True
+            while (self.sensor.Check()):
+                if self.Turning==False:
+                    self.motor.stop()
+                    time.sleep(2)
+                    reset=True
             if reset==True:
                 # self.motor.forward(90, 90)
                 self.motor.forward(50,self.PWMD)
