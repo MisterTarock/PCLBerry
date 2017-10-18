@@ -89,8 +89,6 @@ class Odo:
     def CheckOdo(self):
         return self.L
     def Close(self):
-        motor = MotorControl()
-        motor.stop()
         GPIO.cleanup()
     def Regulation(self):
         print(self.LastL,self.LastD)
