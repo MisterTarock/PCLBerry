@@ -1,6 +1,6 @@
 import RPi.GPIO as GPIO
 import time
-
+from math import *
 
 class MotorControl:
     def __init__(self):
@@ -26,6 +26,7 @@ class MotorControl:
         self.M2Bac = GPIO.PWM(self.Motor2Arr, 100)
         self.M1For.start(0)
         self.M2For.start(0)
+        
     def forward(self,LPWM,RPWM):
         print("Turning motor Forward")
 
@@ -50,6 +51,25 @@ class MotorControl:
         GPIO.output(self.Motor2Arr, GPIO.HIGH)
         GPIO.output(self.Motor2Av, GPIO.LOW)
         GPIO.output(self.Motor2E, GPIO.HIGH)
+
+    def right(self,outerDistance,innerDistance):
+        SpeedRatio=outerDistance/innerDistance
+        self.M1Bac.ChangeDutyCycle(0)
+        self.M1For.ChangeDutyCycle(0.2*SpeedRatio)
+        self.M2Bac.ChangeDutyCycle(0)
+        self.M2For.ChangeDutyCycle(0.2)
+        GPIO.output(self.Motor1E, GPIO.HIGH)
+        GPIO.output(self.Motor2E, GPIO.HIGH)
+
+    def left(self, outerDistance,innerDistance):
+        SpeedRatio = outerDistance / innerDistance
+        self.M1Bac.ChangeDutyCycle(0)
+        self.M1For.ChangeDutyCycle(0.2)
+        self.M2Bac.ChangeDutyCycle(0)
+        self.M2For.ChangeDutyCycle(0.2*SpeedRatio)
+        GPIO.output(self.Motor1E, GPIO.HIGH)
+        GPIO.output(self.Motor2E, GPIO.HIGH)
+
 
     def stop(self):
         print("Stopping motor")
