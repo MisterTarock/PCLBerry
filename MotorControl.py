@@ -53,6 +53,7 @@ class MotorControl:
         GPIO.output(self.Motor2E, GPIO.HIGH)
 
     def right(self,outerDistance,innerDistance):
+        print(innerDistance,outerDistance)
         SpeedRatio=outerDistance/innerDistance
         print(SpeedRatio)
         self.M1Bac.ChangeDutyCycle(0)
