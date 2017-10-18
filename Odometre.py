@@ -108,6 +108,7 @@ class Odo:
         self.D=0
         self.motor.stop()
         self.FirsTime=True
+        self.Done=False
 
 
 
