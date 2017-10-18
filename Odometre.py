@@ -147,7 +147,7 @@ odo.setTurn("right",10,90)
 time.sleep(1)
 odo.setTurn("left",10,90)
 time.sleep(1)
-odo.setDistance(50,"Bac")
+odo.setDistance(20,"Bac")
 
 #odo.setTurn("right",30,90)
 odo.Close()
