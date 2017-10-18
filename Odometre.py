@@ -97,7 +97,7 @@ class Odo:
         reset=False
         while(self.Done!=True):
 
-            while self.sensor.Check():
+            while (self.sensor.Check() & self.Turning==False):
 
                 self.motor.stop()
                 time.sleep(2)
