@@ -62,13 +62,14 @@ class Odo:
     def incrementL(self,channel):
         #if GPIO.input(self.OdoL):     # if port 23 == 1
             #print ("Rising edge detected on OdoL")
+
         self.L+=1
         self.LastL+=1
         if self.LastL==5:
             self.Regulation()
             self.LastD=0
             self.LastL=0
-            self.L=0
+
 
         if self.L>=self.Dist:
             self.Done=True
@@ -119,6 +120,7 @@ class Odo:
     def Close(self):
         GPIO.cleanup()
     def Regulation(self):
+        print(self.L)
         print(self.LastL,self.LastD)
         error=self.LastL-self.LastD
         self.PWMD+=(error/0.3)
