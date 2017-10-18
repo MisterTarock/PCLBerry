@@ -37,7 +37,7 @@ class Odo:
         clicks = wheelTurns * 20
         self.Dist = clicks
         print(self.Dist)
-        self.motor.forward(0.5, 0.5)
+        self.motor.forward(50, 50)
         self.Acquisition()
 
     def setTurn(self,direction,radius,angle):
