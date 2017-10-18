@@ -55,7 +55,7 @@ class Odo:
             self.motor.right(innerDistance,outerDistance)
         clicks = wheelTurns * 20
         self.Dist = clicks
-        self.Acquisition()
+        #self.Acquisition()
 
 
     def incrementL(self,channel):
