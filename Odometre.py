@@ -69,10 +69,11 @@ class Odo:
         self.L+=1
         self.LastL+=1
         print(self.Turning)
-        if self.LastL==5 & self.Turning==False:
-            self.Regulation()
-            self.LastD=0
-            self.LastL=0
+        if self.LastL==5:
+            if self.Turning==False:
+                self.Regulation()
+                self.LastD=0
+                self.LastL=0
 
 
         if self.L>=self.Dist:
@@ -127,7 +128,6 @@ class Odo:
     def Close(self):
         GPIO.cleanup()
     def Regulation(self):
-        print(self.L)
         print(self.LastL,self.LastD)
         error=self.LastL-self.LastD
         self.PWMD+=(error/0.3)
