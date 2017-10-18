@@ -14,7 +14,7 @@ class Odo:
 
         self.OdoL = 23
         self.OdoD = 21
-
+        self.FirsTime=False
         GPIO.setup(self.OdoD, GPIO.IN)
         GPIO.setup(self.OdoL, GPIO.IN)
         self.L = 0
@@ -83,8 +83,9 @@ class Odo:
 
     def Acquisition(self):
         print('Acquisition')
-        GPIO.add_event_detect(self.OdoL, GPIO.BOTH, callback=self.incrementL, bouncetime=100)
-        GPIO.add_event_detect(self.OdoD, GPIO.BOTH, callback=self.incrementD, bouncetime=100)
+        if self.FirsTime=False:
+            GPIO.add_event_detect(self.OdoL, GPIO.BOTH, callback=self.incrementL, bouncetime=100)
+            GPIO.add_event_detect(self.OdoD, GPIO.BOTH, callback=self.incrementD, bouncetime=100)
         reset=False
         while(self.Done!=True):
 
@@ -102,6 +103,7 @@ class Odo:
         self.L = 0
         self.D=0
         self.motor.stop()
+        self.FirsTime=True
 
 
 
@@ -128,6 +130,5 @@ class Odo:
 
 odo=Odo()
 odo.setDistance(100)
-odo=Odo()
 odo.setTurn("right",100,90)
 odo.Close()
