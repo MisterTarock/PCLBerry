@@ -55,6 +55,9 @@ class MotorControl:
     def right(self,outerDistance,innerDistance):
         print(innerDistance,outerDistance)
         SpeedRatio=outerDistance/innerDistance
+        self.M1For.start(0)
+        self.M2For.start(0)
+        self.M1For
         print(SpeedRatio)
         self.M1Bac.ChangeDutyCycle(0)
         self.M1For.ChangeDutyCycle(50)
