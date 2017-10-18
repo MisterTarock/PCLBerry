@@ -69,10 +69,9 @@ class Odo:
         self.L+=1
         self.LastL+=1
         if self.LastL==5:
-            if self.Turning==False:
-                self.Regulation()
-                self.LastD=0
-                self.LastL=0
+            self.Regulation()
+            self.LastD=0
+            self.LastL=0
 
 
         if self.L>=self.Dist:
