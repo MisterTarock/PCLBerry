@@ -51,7 +51,6 @@ class Odo:
             self.motor.stop()
             time.sleep(1)
 
-            self.Close()
         #print ("rising="+str(self.L))
 
 
@@ -90,7 +89,9 @@ class Odo:
     def CheckOdo(self):
         return self.L
     def Close(self):
-        print(self.L, self.D)
+        motor = MotorControl()
+        motor.stop()
+        GPIO.cleanup()
     def Regulation(self):
         print(self.LastL,self.LastD)
         error=self.LastL-self.LastD
@@ -102,5 +103,5 @@ class Odo:
 
 
 
-Odo(100)
-GPIO.cleanup()
+odo=Odo(100)
+odo.Close()
