@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="d97c402b-7ec4-4721-a991-c4701b9cbe81" name="Default" comment="" />
+=======
+    <list default="true" id="d97c402b-7ec4-4721-a991-c4701b9cbe81" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Odometre.py" afterPath="$PROJECT_DIR$/Odometre.py" />
+    </list>
+>>>>>>> 3152b224c6c1e25f8b0d34d1a9605a1ae70a17e9
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,7 +24,11 @@
       <file leaf-file-name="Ultrason.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Ultrason.py">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="476">
+=======
+            <state relative-caret-position="658">
+>>>>>>> 3152b224c6c1e25f8b0d34d1a9605a1ae70a17e9
               <caret line="30" column="5" lean-forward="false" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
@@ -30,21 +40,9 @@
       <file leaf-file-name="MotorControl.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MotorControl.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
+            <state relative-caret-position="-706">
               <caret line="0" column="23" lean-forward="false" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PWm.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PWm.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="17" selection-end-column="15" />
-              <folding>
-                <element signature="e#0#23#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -52,8 +50,13 @@
       <file leaf-file-name="stop.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/stop.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="6" column="8" lean-forward="false" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
+<<<<<<< HEAD
+            <state relative-caret-position="255">
+              <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="17" selection-end-column="15" />
+=======
+            <state relative-caret-position="44">
+              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="4" selection-end-column="14" />
+>>>>>>> 3152b224c6c1e25f8b0d34d1a9605a1ae70a17e9
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -61,11 +64,36 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="Odometre.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Odometre.py">
+          <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+            <state relative-caret-position="85">
+              <caret line="6" column="8" lean-forward="false" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
+=======
+            <state relative-caret-position="378">
+              <caret line="90" column="20" lean-forward="false" selection-start-line="90" selection-start-column="20" selection-end-line="90" selection-end-column="20" />
+>>>>>>> 3152b224c6c1e25f8b0d34d1a9605a1ae70a17e9
+              <folding>
+                <element signature="e#0#23#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+<<<<<<< HEAD
       <file leaf-file-name="Odometre.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Odometre.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="784">
               <caret line="106" column="14" lean-forward="false" selection-start-line="106" selection-start-column="14" selection-end-line="106" selection-end-column="14" />
+=======
+      <file leaf-file-name="PWm.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PWm.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="286">
+              <caret line="13" column="28" lean-forward="false" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
+>>>>>>> 3152b224c6c1e25f8b0d34d1a9605a1ae70a17e9
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
               </folding>
@@ -95,6 +123,8 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>math.pi</find>
+      <find>cleanu</find>
+      <find>close</find>
     </findStrings>
     <replaceStrings>
       <replace>3.1416</replace>
@@ -108,8 +138,8 @@
       <list>
         <option value="$PROJECT_DIR$/Ultrason.py" />
         <option value="$PROJECT_DIR$/PWm.py" />
-        <option value="$PROJECT_DIR$/stop.py" />
         <option value="$PROJECT_DIR$/MotorControl.py" />
+        <option value="$PROJECT_DIR$/stop.py" />
         <option value="$PROJECT_DIR$/Odometre.py" />
       </list>
     </option>
@@ -141,7 +171,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -156,6 +185,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -399,7 +429,7 @@
     <frame x="-7" y="0" width="974" height="1041" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -846,20 +876,15 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SuperRobot" />
-    <entry file="file://$PROJECT_DIR$/Ultrason.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="30" column="5" lean-forward="false" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PWm.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="17" selection-end-column="15" />
+<<<<<<< HEAD
+        <state relative-caret-position="476">
+          <caret line="30" column="5" lean-forward="false" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+=======
+        <state relative-caret-position="286">
+          <caret line="13" column="28" lean-forward="false" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
+>>>>>>> 3152b224c6c1e25f8b0d34d1a9605a1ae70a17e9
           <folding>
             <element signature="e#0#23#0" expanded="true" />
           </folding>
@@ -868,17 +893,37 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/stop.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="6" column="8" lean-forward="false" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
+<<<<<<< HEAD
+        <state relative-caret-position="255">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="17" selection-end-column="15" />
+=======
+        <state relative-caret-position="44">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="4" selection-end-column="14" />
+>>>>>>> 3152b224c6c1e25f8b0d34d1a9605a1ae70a17e9
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Ultrason.py">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="85">
+          <caret line="6" column="8" lean-forward="false" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
+=======
+        <state relative-caret-position="658">
+          <caret line="30" column="5" lean-forward="false" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+>>>>>>> 3152b224c6c1e25f8b0d34d1a9605a1ae70a17e9
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/MotorControl.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state relative-caret-position="-706">
           <caret line="0" column="23" lean-forward="false" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
           <folding />
         </state>
@@ -886,8 +931,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Odometre.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="784">
           <caret line="106" column="14" lean-forward="false" selection-start-line="106" selection-start-column="14" selection-end-line="106" selection-end-column="14" />
+=======
+        <state relative-caret-position="378">
+          <caret line="90" column="20" lean-forward="false" selection-start-line="90" selection-start-column="20" selection-end-line="90" selection-end-column="20" />
+>>>>>>> 3152b224c6c1e25f8b0d34d1a9605a1ae70a17e9
           <folding>
             <element signature="e#0#23#0" expanded="true" />
           </folding>

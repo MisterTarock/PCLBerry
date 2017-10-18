@@ -73,7 +73,6 @@ class Odo:
             self.motor.stop()
             time.sleep(1)
 
-            self.Close()
         #print ("rising="+str(self.L))
 
 
@@ -103,7 +102,7 @@ class Odo:
         self.D=0
         self.motor.stop()
 
-        GPIO.cleanup()
+
         return 1
         #GPIO.add_event_detect(OdoL, GPIO.FALLING, callback=incrementL)
 
@@ -112,12 +111,11 @@ class Odo:
     def CheckOdo(self):
         return self.L
     def Close(self):
-        print(self.L, self.D)
         GPIO.cleanup()
     def Regulation(self):
         print(self.LastL,self.LastD)
         error=self.LastL-self.LastD
-        self.PWMD+=(error/0.4)
+        self.PWMD+=(error/0.5)
 
         print("Modiying right wheel PWM to"+str(self.PWMD))
         self.motor.forward(50,self.PWMD)
@@ -127,4 +125,4 @@ class Odo:
 odo=Odo()
 odo.setDistance(100)
 odo.setTurn("right",1,90)
-stop=stopAll()
+odo.Close()
