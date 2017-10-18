@@ -9,7 +9,7 @@ class Odo:
     def __init__(self):
 
         self.Done=False
-        self.Turning=False
+        self.Turning=True
 		#to define whicj type of layout is used for the pin mapping
         GPIO.setmode(GPIO.BOARD)
 
@@ -138,6 +138,6 @@ class Odo:
 
 
 odo=Odo()
-odo.setDistance(50)
+#odo.setDistance(50)
 odo.setTurn("right",100,90)
 odo.Close()
