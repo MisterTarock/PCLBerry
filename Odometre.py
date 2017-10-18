@@ -126,5 +126,5 @@ class Odo:
 
 odo=Odo()
 odo.setDistance(100)
-odo.setTurn("right",1,90)
+odo.setTurn("right",100,90)
 #odo.Close()
