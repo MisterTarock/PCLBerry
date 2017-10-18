@@ -21,7 +21,7 @@ class Odo:
         self.L = 0
         self.LastL=0
         self.LastD=0
-        self.PWMD=50
+        self.PWMD=70
         self.D = 0
 
         self.sensor=Ultrason()
@@ -39,7 +39,7 @@ class Odo:
         clicks = wheelTurns * 20
         self.Dist = clicks
         print(self.Dist)
-        self.motor.forward(50, 50)
+        self.motor.forward(70, 70)
         self.Acquisition()
 
     def setTurn(self,direction,radius,angle):
@@ -129,10 +129,10 @@ class Odo:
     def Regulation(self):
         print(self.LastL,self.LastD)
         error=self.LastL-self.LastD
-        self.PWMD+=(error/0.3)
+        self.PWMD+=(error/0.2)
 
         print("Modiying right wheel PWM to"+str(self.PWMD))
-        self.motor.forward(50,self.PWMD)
+        self.motor.forward(70,self.PWMD)
 
 
 
