@@ -55,23 +55,20 @@ class MotorControl:
     def right(self,outerDistance,innerDistance):
         print(innerDistance,outerDistance)
         SpeedRatio=outerDistance/innerDistance
-        self.M1For.start(0)
-        self.M2For.start(0)
-        print(SpeedRatio)
-        self.M1Bac.ChangeDutyCycle(0)
-        self.M1For.ChangeDutyCycle(50*SpeedRatio)
-        self.M2Bac.ChangeDutyCycle(0)
-        self.M2For.ChangeDutyCycle(50)
+        GPIO.output(self.Motor1Arr, GPIO.LOW)
+        GPIO.output(self.Motor1Av, GPIO.LOW)
         GPIO.output(self.Motor1E, GPIO.HIGH)
+        GPIO.output(self.Motor2Arr, GPIO.HIGH)
+        GPIO.output(self.Motor2Av, GPIO.LOW)
         GPIO.output(self.Motor2E, GPIO.HIGH)
 
     def left(self, outerDistance,innerDistance):
         SpeedRatio = outerDistance / innerDistance
-        self.M1Bac.ChangeDutyCycle(0)
-        self.M1For.ChangeDutyCycle(50*SpeedRatio)
-        self.M2Bac.ChangeDutyCycle(0)
-        self.M2For.ChangeDutyCycle(50)
+        GPIO.output(self.Motor1Arr, GPIO.HIGH)
+        GPIO.output(self.Motor1Av, GPIO.LOW)
         GPIO.output(self.Motor1E, GPIO.HIGH)
+        GPIO.output(self.Motor2Arr, GPIO.HIGH)
+        GPIO.output(self.Motor2Av, GPIO.HIGH)
         GPIO.output(self.Motor2E, GPIO.HIGH)
 
 
