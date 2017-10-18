@@ -101,7 +101,7 @@ class Odo:
         self.L = 0
         self.D=0
         self.motor.stop()
-        GPIO.cleanup()
+
 
 
         return 1
@@ -116,7 +116,7 @@ class Odo:
     def Regulation(self):
         print(self.LastL,self.LastD)
         error=self.LastL-self.LastD
-        self.PWMD+=(error/0.5)
+        self.PWMD+=(error/0.3)
 
         print("Modiying right wheel PWM to"+str(self.PWMD))
         self.motor.forward(50,self.PWMD)
@@ -127,4 +127,4 @@ class Odo:
 odo=Odo()
 odo.setDistance(100)
 odo.setTurn("right",100,90)
-#odo.Close()
+odo.Close()
